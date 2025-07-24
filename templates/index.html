@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter - Any to INR</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">💱 Currency Converter (Any to INR)</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST" class="card p-4 shadow-sm">
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input
+                            type="number"
+                            step="any"
+                            name="amount"
+                            id="amount"
+                            class="form-control"
+                            placeholder="Enter amount"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="from_currency" class="form-label">From Currency</label>
+                        <select name="from_currency" id="from_currency" class="form-select" required>
+                            <option value="" disabled selected>Select currency</option>
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <!-- Add more currencies here -->
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Convert to INR</button>
+                </form>
+
+                {% if result %}
+                <div class="alert alert-info mt-4 text-center">
+                    <strong>{{ result }}</strong>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+   <footer class="text-center mt-5 mb-3 text-secondary" style="font-size: 0.9rem;">
+        Developed by L.S.V.Sai Kumar
+    </footer>
+</body>
+</html>
+
